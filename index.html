@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Öykü - 11. Sınıf Tarih Asistanı</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="page-header">
+        <div>
+          <h1>Öykü - 11. Sınıf Tarih Asistanı</h1>
+          <p class="subtitle">
+            Tüm 11. sınıf tarih ünitelerinde, ipucu odaklı ve anlaşılır anlatımla çalış.
+          </p>
+        </div>
+        <div class="tag">v1</div>
+      </header>
+
+      <main class="layout">
+        <section class="card card--info">
+          <h2>11. Sınıf Tarih Ünite Asistanı</h2>
+          <p class="info-text">
+            Bu chatbot 11. sınıf tarih dersinin 1-5. ünitelerindeki konularda yardımcı olur.
+          </p>
+          <ul class="info-list">
+            <li><strong>Sohbet arayüzü</strong> ile soru sor</li>
+            <li><strong>11. sınıf seviyesine</strong> uygun anlatım</li>
+            <li><strong>Alıştırma modu</strong> ile önce ipucu, sonra çözüm</li>
+          </ul>
+          <div class="unit-box" aria-label="Ünite konuları">
+            <div class="unit-title">Kapsam</div>
+            <ul class="unit-list">
+              <li><strong>1. Ünite:</strong> Değişen Dünya Dengeleri Karşısında Osmanlı Siyaseti, 1595-1774 siyasi gelişmeleri ve rekabet</li>
+              <li><strong>2. Ünite:</strong> Değişim Çağında Avrupa ve Osmanlı, isyanlar ve düzeni koruma çabaları</li>
+              <li><strong>3. Ünite:</strong> Devrimler Çağı, sanayi sonrası sömürgecilik, modern orduya geçiş ve toplumsal etkiler</li>
+              <li><strong>4. Ünite:</strong> 1774-1914 denge stratejisi, iç-dış tehditler, reformlar ve darbelerin etkileri</li>
+              <li><strong>5. Ünite:</strong> XX. yüzyılda gündelik hayat, endüstriyel üretim, nüfus hareketleri ve modernleşme</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="card card--chat">
+          <header class="chat-header">
+            <div class="chat-title">
+              <span class="dot"></span>
+              <h2>Sohbet</h2>
+            </div>
+            <div class="controls">
+              <div class="pill" title="Sabit seviye">Seviye: 11. Sınıf</div>
+              <button id="modeButton" type="button" class="mode-button" aria-pressed="false">
+                Mod: Normal
+              </button>
+            </div>
+          </header>
+
+          <div id="chatWindow" class="chat-window">
+            <div class="message message--assistant">
+              <div class="message-meta">Öykü</div>
+              <div class="message-bubble">
+                Merhaba! Ben Öykü, 11. sınıf tarih üniteleri için çalışma asistanınım.
+                Hangi ünitede takıldın? İstersen “Alıştırma” modunda ipuçlarıyla ilerleyelim.
+              </div>
+            </div>
+          </div>
+
+          <form id="chatForm" class="chat-input-row">
+            <textarea
+              id="userInput"
+              rows="2"
+              placeholder="Sorunu yaz. Örn: “Tanzimat Fermanı ile Islahat Fermanı arasındaki farkları açıklar mısın?”"
+              required
+            ></textarea>
+            <button id="sendButton" type="submit">Gönder</button>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
